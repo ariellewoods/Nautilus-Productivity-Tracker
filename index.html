@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.11.0/build/cssnormalize/cssnormalize-min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <title>nautilus</title>
+</head>
+<body>
+
+<h2 class="mainHeader">nautilus</h2>
+
+<div class="backgroundImgContainer" title="A nautilus shell outline">
+    <div id="clock">25:00</div>
+    <div id="timerType"></div>
+</div>
+    
+<div class="btnContainer">
+    <button class="startAndResetBtns" id="startBtn">Start</button>
+    <button class="startAndResetBtns" id="resetBtn">Reset</button>
+</div>
+
+<div class="bottomContainer">
+
+    <div class="configureContainer">
+        <h3>Configure Timers</h3>
+        <div class="timerSettingsRow">
+            <label class="timerSettingsLabel" for="focusTime">Focus time:</label>
+            <div class="timerSettingsControls">
+                <input type="text" class="timerValue" id="focusTime" name="focusTime" value="25">
+                <div class="plusMinusContainer">
+                    <button class="plusMinusBtn unselectable" id="focusInc">+</button>
+                    <button class="plusMinusBtn unselectable" id="focusDec">-</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="timerSettingsRow extraSpacing">
+            <label class="timerSettingsLabel" for="breakTime">Break time:</label>
+            <div class="timerSettingsControls">
+                <input type="text" class="timerValue" id="breakTime" name="breakTime" value="5">
+                <div class="plusMinusContainer">
+                    <button class="plusMinusBtn unselectable" id="breakInc">+</button>
+                    <button class="plusMinusBtn unselectable" id="breakDec">-</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="timerSettingsRow">
+            <label class="timerSettingsLabel" for="toggle">Sound:</label>
+            <div class="timerSettingsControls">
+                <input type="checkbox" class="toggle" id="toggle" name="toggle" onclick = "soundFunction()">
+                <div class="invisible"> 
+                    <div class="plusMinusBtn" id="studyInc">+</div>
+                    <div class="plusMinusBtn" id="studyDec">-</div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="productivityContainer">
+        <h3>Daily Productivity</h3>
+        <div class="productivityLabelRow">Total pomodoros: </div>
+        <div class="productivityValueRow" id="pomTracker">0</div>
+        <div class="productivityLabelRow">Total focused time: </div>
+        <div class="productivityValueRow" id="timeTracker">00:00</div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
